@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            grid-template-areas: 'nav nav nav nav'
+                                'header header header header'
+                                'section section section section'
+                                'footer footer footer footer';
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            grid-area: header;
+            width: 100%;
+        }
+
+        header div {
+            width: 50%;
+        }
+
+        nav {
+            align-items: center;
+            background-color: white;
+            border-bottom: 1px solid purple;
+            color: black;
+            display: flex;
+            grid-area: nav;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            align-items: center;
+            display: flex;
+            list-style: none;
+        }
+
+        nav a {
+            color: gray;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        section{
+            grid-area: section;
+        }
+
+        .sobre {
+            align-items: center;
+            border: 1px solid purple;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .solucoes {
+            background-color: blueviolet;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .solucoes div {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            list-style: none;
+            width: 100%;
+        }
+
+        .solucoes a {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            width: 25%;
+        }
+
+        .initial {
+            flex-direction: initial !important;
+        }
+
+        .idealizadores {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+        }
+
+        .idealizadores div {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 10px 0;
+            width: 20%;
+        }
+
+        .idealizadores p {
+            margin: 0;
+        }
+
+        .idealizadores img {
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+
+        .idealizadores-pessoa {
+            align-items: center;
+            display: flex;
+            flex-direction: row !important;
+            justify-content: center;
+            width: 100% !important;
+        }
+
+        .estrela {
+            font-size: 30px;
+        }
+
+        .border {
+            border-left: 1px solid gray;
+            border-right: 1px solid gray;
+        }
+
+        .flex-start {
+            align-items: flex-start !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100% !important;
+        }
+
+        .flex-start p {
+            margin: 3px 0;
+            width: 98%;
+        }
+
+        footer {
+            align-items: center;
+            background-color: purple;
+            color: white;
+            display: flex;
+            grid-area: footer;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        footer ul {
+            align-items: center;
+            display: flex;
+            list-style: none;
+            margin: 0;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        @media only screen and (max-width: 1098px) {
+            header {
+                flex-direction: column;
+            }
+
+            header div {
+                width: 100%;
+            }
+
+            .solucoes,
+            .sobre {
+                padding: 0;
+            }
+
+            .solucoes p,
+            .sobre p {
+                width: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 798px) {
+
+            .idealizadores,
+            .idealizadores-pessoa {
+                flex-direction: column !important;
+            }
+
+            .idealizadores div,
+            .idealizadores-pessoa div {
+                width: 100% !important;
+            }
+
+
+            .border {
+                border: none;
+                border-bottom: 1px solid gray;
+                border-top: 1px solid gray;
+            }
+
+            .flex-start {
+                align-items: center !important;
+            }
+
+            .flex-start p {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>Emprega<span>+</span></h1>
+        <ul>
+            <li><a href="#">Sobre a Emprega+</a></li>
+            <li><a href="#">Nossas soluções</a></li>
+            <li><a href="#">Idealizadores</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="sobre">
+            <h2>Sobre a Emprega+</h2>
+            <p>
+                A Emprega<b> + </b>, surgiu para resolver a necessidade de um gap do mercado nos últimos anos, o qual afetou milhares de brasileiros, causando assim grandes problemas econômicos, desigualdade social e desemprego.
+            </p>
+            <p>
+                A Emprega<b> + </b>, soluciona estes problemas através de campanhas de empregabilidade, classificação de candidatos e qualificação profissional para inserção dos mesmos em vagas pontuais
+            </p>
+        </div>
+        <div class="solucoes">
+            <h2>Nossas Soluções</h2>
+            <p>
+                Através de campanhas de empregabilidade, a Emprega <b> + </b> conecta profissionais previamente capacitados por nossa plataforma à empresas que necessitam de profissionais qualificados para preencherem suas vagas.
+            </p>
+            <p>
+                As campanhas são feitas através de um nivelamento profissional, após isso identificamos os perfis que se adaptarão a vaga, disponibilizamos uma qualificação e encaminhamos o profissional já validado à vaga disponível.
+            </p>
+            <p>Campanhas para a inserção de minorias no mercado de trabalho:</p>
+            <div>
+                <div class="initial">
+                    <a href="#">
+                        <p class="50mais.jpg">&#9733;</p>
+                        <p>Inserção de Profissionais Maduros 50+</p>
+                    </a>
+                    <a href="#">
+                        <p class="lgbt.jpg">&#9733;</p>
+                        <p>Empoderamento do público LGBTQ+</p>
+                    </a>
+                    <a href="#">
+                        <p class="PCD.jpg">&#9733;</p>
+                        <p>Inclusão de PCDs</p>
+                    </a>
+                    <a href="#">
+                        <p class="mulher.jpg">&#9733;</p>
+                        <p>Empoderamento de Mulheres</p>
+                    </a>
+                </div>
+                <div class="initial">
+                    <a href="#">
+                        <p class="negros.jpg">&#9733;</p>
+                        <p>Empoderamento de Afrodescendentes</p>
+                    </a>
+                    <a href="#">
+                        <p class="imigrantes.jpg">&#9733;</p>
+                        <p>Inclusão de Emigrantes e Imigrantes</p>
+                    </a>
+                    <a href="#">
+                        <p class="favela.jpg">&#9733;</p>
+                        <p>Profissionalização de Pessoas em situação de Vulnerabilidade social</p>
+                    </a> 
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="idealizadores">
+        <h2>Idealizadores</h2>
+        <div class="idealizadores-pessoa">
+            <div>
+                <img src="https://fsmedia.imgix.net/43/e6/c3/51/cc03/4242/af6a/479124d85903/screen-shot-2019-02-19-at-40014-pmpng.png?auto=compress&h=1200&w=1200&crop=edges&fit=crop"
+                    alt="pessoa">
+                <h3>Pessoa</h3>
+                <div class="flex-start">
+                    <p>-Graduada em Engenharia Civil</p>
+                    <p>-Estudante de Gestão de Negócios e Inovação</p>
+                    <p>-Estudante de Programação</p>
+                </div>
+            </div>
+            <div class="border">
+                <img src="https://fsmedia.imgix.net/43/e6/c3/51/cc03/4242/af6a/479124d85903/screen-shot-2019-02-19-at-40014-pmpng.png?auto=compress&h=1200&w=1200&crop=edges&fit=crop"
+                    alt="pessoa">
+                <h3>Pessoa</h3>
+                <div class="flex-start">
+                    <p>-Graduada em Engenharia Civil</p>
+                    <p>-Estudante de Gestão de Negócios e Inovação</p>
+                    <p>-Estudante de Programação</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://fsmedia.imgix.net/43/e6/c3/51/cc03/4242/af6a/479124d85903/screen-shot-2019-02-19-at-40014-pmpng.png?auto=compress&h=1200&w=1200&crop=edges&fit=crop"
+                    alt="pessoa">
+                <h3>Pessoa</h3>
+                <div class="flex-start">
+                    <p>-Graduada em Engenharia Civil</p>
+                    <p>-Estudante de Gestão de Negócios e Inovação</p>
+                    <p>-Estudante de Programação</p>
+                </div>
+            </div>
+            <div class="border">
+                <img src="https://fsmedia.imgix.net/43/e6/c3/51/cc03/4242/af6a/479124d85903/screen-shot-2019-02-19-at-40014-pmpng.png?auto=compress&h=1200&w=1200&crop=edges&fit=crop"
+                    alt="pessoa">
+                <h3>Pessoa</h3>
+                <div class="flex-start">
+                    <p>-Graduada em Engenharia Civil</p>
+                    <p>-Estudante de Gestão de Negócios e Inovação</p>
+                    <p>-Estudante de Programação</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://fsmedia.imgix.net/43/e6/c3/51/cc03/4242/af6a/479124d85903/screen-shot-2019-02-19-at-40014-pmpng.png?auto=compress&h=1200&w=1200&crop=edges&fit=crop"
+                    alt="pessoa">
+                <h3>Pessoa</h3>
+                <div class="flex-start">
+                    <p>-Graduada em Engenharia Civil</p>
+                    <p>-Estudante de Gestão de Negócios e Inovação</p>
+                    <p>-Estudante de Programação</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Emprega<span>+</span></p>
+        <ul>
+            <li>
+                <p>link</p>
+            </li>
+            <li>
+                <p>link</p>
+            </li>
+            <li>
+                <p>link</p>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html
